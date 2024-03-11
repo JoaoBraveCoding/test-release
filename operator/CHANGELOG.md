@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.1.0...v0.2.0) (2024-03-11)
+
+
+### Features
+
+* **operator:** new feature ([0ced235](https://github.com/JoaoBraveCoding/test-release/commit/0ced235febb734df8b2a65d12ca212ca83ca8cfd))
+
 ## 0.1.0 (2024-03-11)
 
 
