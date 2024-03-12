@@ -1,0 +1,8 @@
+{
+    "monorepoTags": true,
+    "packages": {
+        "operator": {
+            "component": "operator"
+        }
+    }
+}
