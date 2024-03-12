@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.6.0...v0.7.0) (2024-03-12)
+
+
+### Features
+
+* **operator:** new tittle ([4a3e5fd](https://github.com/JoaoBraveCoding/test-release/commit/4a3e5fd54a10314d4c3b55909d00f1ea8f352cb6))
+* **operator:** update version ([022b1db](https://github.com/JoaoBraveCoding/test-release/commit/022b1db56b3cef15733a9711f9ceb9f5d428ae0a))
+
 ## [0.6.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.5.0...v0.6.0) (2024-03-12)
 
 
