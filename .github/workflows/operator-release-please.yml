@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v4
         with:
-          config-file: operator/.release-please-config.json
           include-component-in-tag: true
           path: operator
           # this assumes that you have created a personal access token
