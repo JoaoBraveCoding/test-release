@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.3.0...v0.4.0) (2024-03-12)
+
+
+### Features
+
+* **operator:** adding feature for 0.4.0 ([1a9b377](https://github.com/JoaoBraveCoding/test-release/commit/1a9b37763e0a9ef226e978fb89b89543dc3a90ff))
+* **operator:** testing ([e8fb7f5](https://github.com/JoaoBraveCoding/test-release/commit/e8fb7f537cd3ac053aa6008f0a729c6f19e56e08))
+
 ## [0.3.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.2.0...v0.3.0) (2024-03-12)
 
 
