@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.7.0...v0.8.0) (2024-03-12)
+
+
+### Features
+
+* **operator:** new version ([a8d0274](https://github.com/JoaoBraveCoding/test-release/commit/a8d02745abe4425cf90ccc4c60429a6f5cfd2539))
+
 ## [0.7.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.6.0...v0.7.0) (2024-03-12)
 
 
