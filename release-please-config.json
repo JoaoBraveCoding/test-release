@@ -1,9 +1,10 @@
 {
-    "pull-request-title-pattern": "chore(${component}): community release ${version}",
     "packages": {
         "operator": {
+            "pull-request-title-pattern": "chore(${component}): community release ${version}",
             "release-type": "go",
-            "changelog-path": "operator/CHANGELOG.md"
+            "changelog-path": "operator/CHANGELOG.md",
+            "tag-separator": "/"
         }
     }
 }
