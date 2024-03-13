@@ -1,11 +1,12 @@
 {
+    "include-component-in-tag": true,
+    "tag-separator": "/",
+    "pull-request-title-pattern": "chore(${component}): community release ${version}",
     "packages": {
         "operator": {
             "component": "operator",
-            "pull-request-title-pattern": "chore(${component}): community release ${version}",
             "release-type": "go",
-            "changelog-path": "CHANGELOG.md",
-            "tag-separator": "/"
+            "changelog-path": "CHANGELOG.md"
         }
     }
 }

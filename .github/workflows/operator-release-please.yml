@@ -15,10 +15,9 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v4
         with:
-          include-component-in-tag: true
+          path: operator
+          config-file: operator/release-please-config.json
           # this assumes that you have created a personal access token
           # (PAT) and configured it as a GitHub action secret named
           # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-          path: operator
-          config-file: operator/release-please-config.json
