@@ -2,7 +2,6 @@
     "pull-request-title-pattern": "chore(${component}): community release ${version}",
     "packages": {
         "operator": {
-            "component": "operator",
             "release-type": "go",
             "changelog-path": "operator/CHANGELOG.md"
         }
