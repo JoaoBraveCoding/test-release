@@ -4,7 +4,7 @@
             "component": "operator",
             "pull-request-title-pattern": "chore(${component}): community release ${version}",
             "release-type": "go",
-            "changelog-path": "operator/CHANGELOG.md",
+            "changelog-path": "CHANGELOG.md",
             "tag-separator": "/"
         }
     }
