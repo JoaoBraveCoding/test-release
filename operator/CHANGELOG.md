@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.1.0...operator/v0.2.0) (2024-03-13)
+
+
+### Features
+
+* **operator:** delete unused folder ([2e58c37](https://github.com/JoaoBraveCoding/test-release/commit/2e58c371be50fad3b937d0089688aeecba431091))
+
 ## [0.8.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.7.0...v0.8.0) (2024-03-12)
 
 
