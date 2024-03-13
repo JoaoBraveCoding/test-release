@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.10.0...v0.11.0) (2024-03-13)
+
+
+### Features
+
+* **operator:** correct CHANGELOG? ([9538d7c](https://github.com/JoaoBraveCoding/test-release/commit/9538d7c893c6b6f6214dd6cee88d917ba1b1b656))
+
 ## [0.10.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.9.0...v0.10.0) (2024-03-13)
 
 
