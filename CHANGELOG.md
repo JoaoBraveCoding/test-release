@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.8.0...v0.9.0) (2024-03-13)
+
+
+### Features
+
+* loki feat ([aaa76db](https://github.com/JoaoBraveCoding/test-release/commit/aaa76dbb61d2497c01ff3c2e500c8ccf9fe30356))
+* **operator:** operator feat ([9e9a3cc](https://github.com/JoaoBraveCoding/test-release/commit/9e9a3cc16408255ba65b1d406917e5cab15ee164))
+* **operator:** test ([79c5ed3](https://github.com/JoaoBraveCoding/test-release/commit/79c5ed3f3c25eec7a64651a117595cb516e4ca88))
+
 ## [1.12.0](https://github.com/grafana/loki-release/compare/v1.11.5...v1.12.0) (2024-02-27)
 
 
