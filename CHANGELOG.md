@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.9.0...v0.10.0) (2024-03-13)
+
+
+### Features
+
+* **operator:** lets go ([021a539](https://github.com/JoaoBraveCoding/test-release/commit/021a539698c9200d6e511d53a4c4399ce95f9e13))
+
 ## [0.9.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.8.0...v0.9.0) (2024-03-13)
 
 
