@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.4.0...operator/v0.5.0) (2024-03-13)
+
+
+### Features
+
+* **operator:** pog ([ce2f40b](https://github.com/JoaoBraveCoding/test-release/commit/ce2f40bfc1e01244aeec794803d2ebb09fb1f12e))
+
 ## [0.4.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.3.0...operator/v0.4.0) (2024-03-13)
 
 
