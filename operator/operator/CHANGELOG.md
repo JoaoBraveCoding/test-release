@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.10.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.9.0...v0.10.0) (2024-03-13)
+
+
+### Features
+
+* **operator:** correct CHANGELOG? ([9538d7c](https://github.com/JoaoBraveCoding/test-release/commit/9538d7c893c6b6f6214dd6cee88d917ba1b1b656))
+* **operator:** lets go ([021a539](https://github.com/JoaoBraveCoding/test-release/commit/021a539698c9200d6e511d53a4c4399ce95f9e13))
+* **operator:** new operator feature ([b230641](https://github.com/JoaoBraveCoding/test-release/commit/b23064109e268e6325678438398026ea788773e7))
+* **operator:** trst ([bea2508](https://github.com/JoaoBraveCoding/test-release/commit/bea250828fcc21a62d4bd15f2043afd1d1d1d436))
+
 ## [0.9.0](https://github.com/JoaoBraveCoding/test-release/compare/v0.8.0...v0.9.0) (2024-03-13)
 
 
