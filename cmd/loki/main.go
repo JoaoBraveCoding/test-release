@@ -9,6 +9,7 @@ import (
 func main() {
 	fmt.Println("New feature for 0.1.0")
 	fmt.Println("New feature for 0.2.0")
+	fmt.Println("New feature for 0.2.0")
 
 	uid, err := uuid.GenerateUUID()
 	if err != nil {
