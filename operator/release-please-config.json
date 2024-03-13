@@ -5,7 +5,8 @@
         "operator": {
             "component": "operator",
             "release-type": "go",
-            "pull-request-title-pattern": "chore(${component}): community release ${version}"
+            "pull-request-title-pattern": "chore(${component}): community release ${version}",
+            "changelog-path": "CHANGELOG.md"
         }
     }
 }
