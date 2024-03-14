@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.6.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.5.0...operator/v0.6.0) (2024-03-14)
+
+
+### Features
+
+* **operator:** pog ([79d2b93](https://github.com/JoaoBraveCoding/test-release/commit/79d2b933d0872e245c27b226aae7b1a8a467b76a))
+* **operator:** test ([d509a57](https://github.com/JoaoBraveCoding/test-release/commit/d509a57a1efb7dd72b466056a5262eab3553ef14))
+* **operator:** test ([517c18f](https://github.com/JoaoBraveCoding/test-release/commit/517c18f1545ebd0327fb821625cd95e3dd2ebd9e))
+* **operator:** testing with paths ([2b2575e](https://github.com/JoaoBraveCoding/test-release/commit/2b2575e2fe63af1496455806e40853c06526cbc5))
+
+
+### Bug Fixes
+
+* **operator:** test ([a02a8df](https://github.com/JoaoBraveCoding/test-release/commit/a02a8df840f6fd988854d7ac91b241fdd06ac077))
+
 ## [0.5.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.4.0...operator/v0.5.0) (2024-03-13)
 
 
