@@ -1,13 +1,15 @@
+name: operator-release-please
+
 on:
   push:
+    paths:
+      - 'operator/**'
     branches:
       - master
 
 permissions:
   contents: write
   pull-requests: write
-
-name: release-please
 
 jobs:
   release-please:
@@ -17,7 +19,4 @@ jobs:
         with:
           path: operator
           config-file: operator/release-please-config.json
-          # this assumes that you have created a personal access token
-          # (PAT) and configured it as a GitHub action secret named
-          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
