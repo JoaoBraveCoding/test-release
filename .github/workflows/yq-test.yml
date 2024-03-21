@@ -1,0 +1,20 @@
+name: 'workflow'
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Add OpenShift Supported versions to redhat catalog
+        env:
+          VERSION: 0.6.0
+          OCP_SUPPORTED_VERSIONS: 'v4.12'
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          valueFile: "operators/loki-operator/${VERSION}/metadata/annotations.yaml"
+          propertyPath: "annotations['com.redhat.openshift.versions']"
+          value: ${OCP_SUPPORTED_VERSIONS}
