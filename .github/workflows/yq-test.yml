@@ -16,5 +16,5 @@ jobs:
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: "operators/loki-operator/0.6.0/metadata/annotations.yaml"
-          propertyPath: "annotations.test"
+          propertyPath: "annotations['com.redhat.openshift.versions']"
           value: ${OCP_SUPPORTED_VERSIONS}
