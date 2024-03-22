@@ -31,6 +31,12 @@ jobs:
           createPR: false
           value: ${{ env.ocpSupportedVersions }}
 
+      - name: Use CLA approved github bot
+        run: |
+          git config user.name JoaoBraveCoding
+          git config user.email 10974558+JoaoBraveCoding@users.noreply.github.com
+
+
       - name: Create pull request against JoaoBraveCoding/test-release
         env:
           VERSION: ${{ env.version }}
