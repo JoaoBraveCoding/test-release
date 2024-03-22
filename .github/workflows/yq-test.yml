@@ -15,7 +15,7 @@ jobs:
       - name: Set redhat-openshift-ecosystem specific variables
         env:
           version: 0.6.0
-          ocpSupportedVersions: 'v4.12'
+          ocpSupportedVersions: 'v4.13'
         run: |
           echo "ocpSupportedVersions=${ocpSupportedVersions}" >> $GITHUB_ENV
           echo version=${version} >> $GITHUB_ENV # update GitHub ENV vars
@@ -27,6 +27,30 @@ jobs:
           valueFile: "operators/loki-operator/${{ env.version }}/metadata/annotations.yaml"
           propertyPath: "annotations['com.redhat.openshift.versions']"
           message: "add redhat community specifc annotation"
-          commitChange: true
+          commitChange: false
           createPR: false
           value: ${{ env.ocpSupportedVersions }}
+
+      - name: Create pull request against JoaoBraveCoding/test-release
+        env:
+          VERSION: ${{ env.version }}
+          GH_TOKEN: ${{ secrets.GRAFANABOT_GITHUB_TOKEN }}
+        run: |
+          message="Update the loki-operator to $VERSION"
+          body="Release loki-operator \`$VERSION\`.
+
+          "
+          branch="update-loki-operator-to-${VERSION}"
+
+          # gh pr create doesn't have a way to explicitly specify different head and base
+          # repositories currently, but it will implicitly pick up the head from a different
+          # repository if you set up a tracking branch
+
+          git checkout -b $branch
+          git add -A
+          git commit -s -m "$message"
+          git push -f --set-upstream origin $branch
+          gh pr create --title "$message" \
+                       --body "$body" \
+                       --repo JoaoBraveCoding/test-release \
+                       --base main
