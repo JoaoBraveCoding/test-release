@@ -12,11 +12,17 @@ jobs:
   test-update-file:
     runs-on: ubuntu-latest
     steps:
+      - name: Set redhat-openshift-ecosystem specific variables
+        if: ${{ inputs.org == 'redhat-openshift-ecosystem' }}
+        env:
+          version: 0.6.0          
+          ocpSupportedVersions: 'v4.12'
+        run: |
+          echo "ocpSupportedVersions=${ocpSupportedVersions}" >> $GITHUB_ENV
+          echo version=${version} >> $GITHUB_ENV # update GitHub ENV vars
+
       - uses: actions/checkout@v3
       - name: Add OpenShift Supported versions to redhat catalog
-        env:
-          VERSION: 0.6.0
-          OCP_SUPPORTED_VERSIONS: 'v4.12'
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: "operators/loki-operator/0.6.0/metadata/annotations.yaml"
@@ -24,4 +30,4 @@ jobs:
           message: "add redhat community specifc annotation"
           commitChange: true
           createPR: false
-          value: ${OCP_SUPPORTED_VERSIONS}
+          value: ${{ env.ocpSupportedVersions }}
