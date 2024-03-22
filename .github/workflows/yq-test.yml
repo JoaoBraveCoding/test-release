@@ -24,7 +24,7 @@ jobs:
       - name: Add OpenShift Supported versions to redhat catalog
         uses: fjogeleit/yaml-update-action@main
         with:
-          valueFile: "operators/loki-operator/0.6.0/metadata/annotations.yaml"
+          valueFile: "operators/loki-operator/${{ env.version }}/metadata/annotations.yaml"
           propertyPath: "annotations['com.redhat.openshift.versions']"
           message: "add redhat community specifc annotation"
           commitChange: true
