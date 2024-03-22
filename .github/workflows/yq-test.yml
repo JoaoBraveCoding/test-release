@@ -30,6 +30,7 @@ jobs:
           commitChange: false
           createPR: false
           value: ${{ env.ocpSupportedVersions }}
+          targetBranch: update-loki-operator-to-${{ env.version }} 
 
       - name: Use CLA approved github bot
         run: |
