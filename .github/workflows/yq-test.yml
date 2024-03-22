@@ -17,4 +17,5 @@ jobs:
         with:
           valueFile: "operators/loki-operator/0.6.0/metadata/annotations.yaml"
           propertyPath: "annotations['com.redhat.openshift.versions']"
+          createPR: 'false'
           value: ${OCP_SUPPORTED_VERSIONS}
