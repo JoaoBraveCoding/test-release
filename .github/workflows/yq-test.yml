@@ -40,6 +40,7 @@ jobs:
       - name: Create pull request against JoaoBraveCoding/test-release
         env:
           VERSION: ${{ env.version }}
+          GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
         run: |
           message="Update the loki-operator to $VERSION"
           body="Release loki-operator \`$VERSION\`.
