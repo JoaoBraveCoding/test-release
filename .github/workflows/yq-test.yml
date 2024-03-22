@@ -28,6 +28,7 @@ jobs:
           propertyPath: "annotations['com.redhat.openshift.versions']"
           commitChange: false
           value: ${{ env.ocpSupportedVersions }}
+          updateFile: true
 
       - name: Use CLA approved github bot
         run: |
