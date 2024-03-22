@@ -24,4 +24,4 @@ jobs:
           message: "add redhat community specifc annotation"
           commitChange: true
           createPR: false
-          value: ${{ OCP_SUPPORTED_VERSIONS }}
+          value: ${{OCP_SUPPORTED_VERSIONS}}
