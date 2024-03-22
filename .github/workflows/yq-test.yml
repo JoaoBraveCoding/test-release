@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set redhat-openshift-ecosystem specific variables
-        if: ${{ inputs.org == 'redhat-openshift-ecosystem' }}
         env:
           version: 0.6.0          
           ocpSupportedVersions: 'v4.12'
