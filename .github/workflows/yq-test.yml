@@ -15,7 +15,7 @@ jobs:
       - name: Set redhat-openshift-ecosystem specific variables
         env:
           version: 0.6.0
-          ocpSupportedVersions: 'v4.13'
+          ocpSupportedVersions: 'v4.14'
         run: |
           echo "ocpSupportedVersions=${ocpSupportedVersions}" >> $GITHUB_ENV
           echo version=${version} >> $GITHUB_ENV # update GitHub ENV vars
@@ -28,7 +28,6 @@ jobs:
           propertyPath: "annotations['com.redhat.openshift.versions']"
           commitChange: false
           value: ${{ env.ocpSupportedVersions }}
-          updateFile: true
 
       - name: Use CLA approved github bot
         run: |
