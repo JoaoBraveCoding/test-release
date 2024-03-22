@@ -26,17 +26,13 @@ jobs:
         with:
           valueFile: "operators/loki-operator/${{ env.version }}/metadata/annotations.yaml"
           propertyPath: "annotations['com.redhat.openshift.versions']"
-          message: "add redhat community specifc annotation"
           commitChange: false
-          createPR: false
           value: ${{ env.ocpSupportedVersions }}
-          targetBranch: update-loki-operator-to-${{ env.version }} 
 
       - name: Use CLA approved github bot
         run: |
           git config user.name JoaoBraveCoding
           git config user.email 10974558+JoaoBraveCoding@users.noreply.github.com
-
 
       - name: Create pull request against JoaoBraveCoding/test-release
         env:
