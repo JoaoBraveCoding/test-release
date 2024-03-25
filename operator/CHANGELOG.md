@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.6.0...operator/v0.7.0) (2024-03-25)
+
+
+### Features
+
+* **operator:** test ([e3ee817](https://github.com/JoaoBraveCoding/test-release/commit/e3ee817ff6fa90fbf94360ab670c87a074c2806e))
+* **operator:** we are releasing 0.7.0 ([8f1c18f](https://github.com/JoaoBraveCoding/test-release/commit/8f1c18fb4eea04259cac2613dff64620a4e60b50))
+
 ## [0.6.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.5.0...operator/v0.6.0) (2024-03-14)
 
 
