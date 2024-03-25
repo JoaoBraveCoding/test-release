@@ -1,4 +1,5 @@
 {
+    "versioning-strategy": "always-bump-patch",
     "include-component-in-tag": true,
     "tag-separator": "/",
     "packages": {
