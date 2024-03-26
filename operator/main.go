@@ -19,7 +19,7 @@ func main() {
 	fmt.Println("New feature for 0.6.0")
 	fmt.Println("New feature for 0.7.0")
 	fmt.Println("New feature for 0.7.1")
-	fmt.Println("New feature for 0.7.2")
+	fmt.Println("New feature for 0.8.0")
 	
 	uid, err := uuid.GenerateUUID()
 	if err != nil {
