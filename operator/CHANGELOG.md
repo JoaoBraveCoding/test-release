@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.7.0...operator/v0.8.0) (2024-03-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* **operator:** this should bump the minor version to 0.8.0
+
+### Features
+
+* **operator:** test ([2028f9d](https://github.com/JoaoBraveCoding/test-release/commit/2028f9d6eab643dc001ae69161635941f2e79406))
+* **operator:** this should bump the minor version to 0.8.0 ([0c8938e](https://github.com/JoaoBraveCoding/test-release/commit/0c8938e1ecb4c2c311adef826f80c27a5693c8e6))
+
 ## [0.7.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.6.0...operator/v0.7.0) (2024-03-25)
 
 
