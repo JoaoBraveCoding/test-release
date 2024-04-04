@@ -12,7 +12,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  release-please:
+  releasePlease:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
@@ -20,12 +20,12 @@ jobs:
           path: operator
           config-file: operator/release-please-config.json
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-  publish-release:
+  publishRelease:
     needs:
-    - "release-please"
+    - "releasePlease"
     runs-on: ubuntu-latest
     steps:
       - name: "publish release"
-        if: "${{ !fromJSON(needs.release-please.outputs.exists) || (needs.release-please.outputs.draft && fromJSON(needs.release-please.outputs.draft)) }}"
+        if: "${{ !fromJSON(needs.releasePlease.outputs.exists) || (needs.releasePlease.outputs.draft && fromJSON(needs.releasePlease.outputs.draft)) }}"
         run: |
-          gh release edit ${{ needs.release-please.outputs.tag_name }} --draft=false --latest=false
+          gh release edit ${{ needs.releasePlease.outputs.tag_name }} --draft=false --latest=false
