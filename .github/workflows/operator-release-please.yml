@@ -16,7 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
+        id: release
         with:
           path: operator
           config-file: operator/release-please-config.json
           token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+      - name: "publish release"
+        if: ${{ steps.release.outputs.releases_created }}
+        run: |
+          gh release edit ${{ steps.release.outputs.tag_name }} --draft=false --latest=false
