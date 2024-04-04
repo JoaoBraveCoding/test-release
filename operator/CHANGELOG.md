@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.0 (2024-03-19)
+
+- [12228](https://github.com/grafana/loki/pull/12228) **xperimental**: Restructure LokiStack metrics
+- [12164](https://github.com/grafana/loki/pull/12164) **periklis**: Use safe bearer token authentication to scrape operator metrics
+
 ## [0.7.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.6.0...operator/v0.7.0) (2024-03-25)
 
 
