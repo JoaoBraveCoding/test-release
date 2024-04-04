@@ -23,7 +23,8 @@ jobs:
   publish-release:
     needs:
     - "release-please"
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
       - name: "publish release"
         if: "${{ !fromJSON(needs.release-please.outputs.exists) || (needs.release-please.outputs.draft && fromJSON(needs.release-please.outputs.draft)) }}"
         run: |
