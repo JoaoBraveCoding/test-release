@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
+      tag_name: ${{ steps.release.outputs.tag_name }} # e.g. v1.0.0
+      version: ${{ steps.release.outputs.version }} # e.g. 1.0.0
+      all: ${{ toJSON(steps.release.outputs) }}
     steps:
       - uses: google-github-actions/release-please-action@v4
         id: release
@@ -29,7 +31,22 @@ jobs:
     - "releasePlease"
     runs-on: ubuntu-latest
     steps:
+      id: "check_release"
+      name: "check if release exists"
+      run: |
+        set +e
+        isDraft="$(gh release view --json="isDraft" --jq=".isDraft" operator: ${{ needs.releasePlease.outputs.tag_name }} 2>&1)"
+        set -e
+        if [[ "$isDraft" == "release not found" ]]; then
+          echo "exists=false" >> $GITHUB_OUTPUT
+        else
+          echo "exists=true" >> $GITHUB_OUTPUT
+        fi
+        
+        if [[ "$isDraft" == "true" ]]; then
+          echo "draft=true" >> $GITHUB_OUTPUT
+        fi
       - name: "publish release"
-        if: ${{ needs.releasePlease.outputs.release_created }}
+        if: ${{ draft }}
         run: |
           gh release edit ${{ needs.releasePlease.outputs.tag_name }} --draft=false --latest=false
