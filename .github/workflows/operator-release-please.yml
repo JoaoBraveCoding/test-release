@@ -34,21 +34,9 @@ jobs:
       - name: "check if release exists"
         id: "check_release"
         run: |
-          echo "Outputs" ${{ needs.releasePlease.outputs.all }} 
-          set +e
-          isDraft="$(gh release view --json="isDraft" --jq=".isDraft" "operator: ${{ needs.releasePlease.outputs.tag_name }}" 2>&1)"
-          set -e
-          echo "We go: "$isDraft
-          if [[ "$isDraft" == "release not found" ]]; then
-            echo "exists=false" >> $GITHUB_OUTPUT
-          else
-            echo "exists=true" >> $GITHUB_OUTPUT
-          fi
-          
-          if [[ "$isDraft" == "true" ]]; then
-            echo "draft=true" >> $GITHUB_OUTPUT
-          fi
+          echo "Release Created: " ${{ needs.releasePlease.outputs.all.releases_created }} 
+          echo "Release Name: " ${{ needs.releasePlease.outputs.all.operator--name }} 
       - name: "publish release"
-        if: ${{ steps.check_release.outputs.draft }}
+        if: ${{ needs.releasePlease.outputs.all.releases_created }}
         run: |
-          gh release edit ${{ needs.releasePlease.outputs.tag_name }} --draft=false --latest=false
+          gh release edit ${{ needs.releasePlease.outputs.all.operator--name }} --draft=false --latest=false
