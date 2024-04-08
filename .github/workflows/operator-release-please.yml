@@ -29,6 +29,7 @@ jobs:
     needs:
     - "releasePlease"
     runs-on: ubuntu-latest
+    if: ${{ needs.releasePlease.outputs.release_created }}
     steps:
       - name: "pull code to release"
         uses: "actions/checkout@v4"
@@ -38,6 +39,5 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
         working-directory: "release"
-        if: ${{ needs.releasePlease.outputs.release_created }}
         run: |
           gh release edit "${{ needs.releasePlease.outputs.release_name }}" --draft=false --latest=false
