@@ -37,6 +37,7 @@ jobs:
       - name: "check if release exists"
         env:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+        working-directory: "release"
         id: "check_release"
         run: |
           echo "Release Created: " ${{ needs.releasePlease.outputs.release_created }}
