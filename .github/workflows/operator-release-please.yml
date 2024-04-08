@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "publish release"
-        if: "${{ needs.releasePlease.outputs.release_created == true }}"
+        if: ${{ needs.releasePlease.outputs.release_created }}
         run: |
           gh release edit ${{ needs.releasePlease.outputs.tag_name }} --draft=false --latest=false
