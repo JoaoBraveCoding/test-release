@@ -31,12 +31,14 @@ jobs:
     - "releasePlease"
     runs-on: ubuntu-latest
     steps:
-      - id: "check_release"
-        name: "check if release exists"
+      - name: "check if release exists"
+        id: "check_release"
         run: |
+          echo "Outputs" ${{ needs.releasePlease.outputs.all }} 
           set +e
-          isDraft="$(gh release view --json="isDraft" --jq=".isDraft" operator: ${{ needs.releasePlease.outputs.tag_name }} 2>&1)"
+          isDraft="$(gh release view --json="isDraft" --jq=".isDraft" "operator: ${{ needs.releasePlease.outputs.tag_name }}" 2>&1)"
           set -e
+          echo "We go: "$isDraft
           if [[ "$isDraft" == "release not found" ]]; then
             echo "exists=false" >> $GITHUB_OUTPUT
           else
