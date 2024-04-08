@@ -38,4 +38,4 @@ jobs:
       - name: "publish release"
         if: ${{ needs.releasePlease.outputs.release_created }}
         run: |
-          gh release edit ${{ needs.releasePlease.outputs.release_name }} --draft=false --latest=false
+          gh release edit "${{ needs.releasePlease.outputs.release_name }}" --draft=false --latest=false
