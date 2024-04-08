@@ -16,8 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }} # e.g. v1.0.0
-      version: ${{ steps.release.outputs.version }} # e.g. 1.0.0
+      release_name: ${{ steps.release.outputs.operator--name }} # e.g. 1.0.0
       all: ${{ toJSON(steps.release.outputs) }}
     steps:
       - uses: google-github-actions/release-please-action@v4
@@ -34,8 +33,10 @@ jobs:
       - name: "check if release exists"
         id: "check_release"
         run: |
-          echo "Release Created: " ${{ needs.releasePlease.outputs.all.releases_created }} 
-          echo "Release Name: " ${{ needs.releasePlease.outputs.all.operator--name }} 
+          echo "Release Created: " ${{ needs.releasePlease.outputs.releases_created }} 
+          echo "Release Name: " ${{ needs.releasePlease.outputs.release_name }} 
+          echo "All Release Created: " ${{ needs.releasePlease.outputs.all.releases_created }} 
+          echo "All Release Name: " ${{ needs.releasePlease.outputs.all.operator--name }} 
       - name: "publish release"
         if: ${{ needs.releasePlease.outputs.all.releases_created }}
         run: |
