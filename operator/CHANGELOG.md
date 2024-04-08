@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.2](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.9.1...operator/v0.9.2) (2024-04-08)
+
+
+### Features
+
+* **operator:** should work ([314d690](https://github.com/JoaoBraveCoding/test-release/commit/314d6906947059cfc0a2379367bbd667949fc461))
+
 ## [0.9.1](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.9.0...operator/v0.9.1) (2024-04-08)
 
 
