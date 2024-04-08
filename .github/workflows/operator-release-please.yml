@@ -26,6 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "publish release"
-        if: "${{ !fromJSON(needs.releasePlease.outputs.exists) || (needs.releasePlease.outputs.draft && fromJSON(needs.releasePlease.outputs.draft)) }}"
+        if: "${{ needs.releasePlease.outputs.release_created == true }}"
         run: |
           gh release edit ${{ needs.releasePlease.outputs.tag_name }} --draft=false --latest=false
