@@ -14,8 +14,12 @@ permissions:
 jobs:
   releasePlease:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       - uses: google-github-actions/release-please-action@v4
+        id: release
         with:
           path: operator
           config-file: operator/release-please-config.json
