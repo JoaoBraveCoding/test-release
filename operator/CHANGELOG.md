@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.10.0](https://github.com/JoaoBraveCoding/test-release/compare/operator-v0.9.1...operator/v0.10.0) (2024-04-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **operator:** release-please improved
+* **operator:** this should bump the minor version to 0.8.0
+
+### Features
+
+* **operator:** 0.9.1 ([3bccde7](https://github.com/JoaoBraveCoding/test-release/commit/3bccde7cadba5d514e2c0e6ea4ce73486eaef3e6))
+* **operator:** change name ([7fd8940](https://github.com/JoaoBraveCoding/test-release/commit/7fd89403a1d061df55934906d1b69c3f49c8dbfe))
+* **operator:** fix lint error ([4993e6b](https://github.com/JoaoBraveCoding/test-release/commit/4993e6bc56723aa0cd17f09ba37a437d2b5607ac))
+* **operator:** hey new feature ([aa106cb](https://github.com/JoaoBraveCoding/test-release/commit/aa106cb8b0fd9e1e0a56809fb04beb4d45d17522))
+* **operator:** pogges ([65f4477](https://github.com/JoaoBraveCoding/test-release/commit/65f4477a2b5194ca2760f0cb21091bdf18f319c8))
+* **operator:** print what we see ([a8fa954](https://github.com/JoaoBraveCoding/test-release/commit/a8fa954da76b599eea00fe52987a8f621d5faa7e))
+* **operator:** publish ([afee874](https://github.com/JoaoBraveCoding/test-release/commit/afee87446f5ca93311d908341fbc7aa456a214fd))
+* **operator:** release-please improved ([32c84e2](https://github.com/JoaoBraveCoding/test-release/commit/32c84e2cd44c44765ddc36d78f03ab9cc6f6d3cf))
+* **operator:** separate thing ([c1b10ec](https://github.com/JoaoBraveCoding/test-release/commit/c1b10ec8ddf36b44be82aca0447c1c51f721b4ea))
+* **operator:** test ([c8c363a](https://github.com/JoaoBraveCoding/test-release/commit/c8c363a8f652698329717b54827139a820299e3d))
+* **operator:** test ([2028f9d](https://github.com/JoaoBraveCoding/test-release/commit/2028f9d6eab643dc001ae69161635941f2e79406))
+* **operator:** this should bump the minor version to 0.8.0 ([0c8938e](https://github.com/JoaoBraveCoding/test-release/commit/0c8938e1ecb4c2c311adef826f80c27a5693c8e6))
+
 ## [0.9.1](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.9.0...operator/v0.9.1) (2024-04-08)
 
 
