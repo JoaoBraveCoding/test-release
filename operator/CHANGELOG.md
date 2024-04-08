@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.8](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.10.7...operator/v0.10.8) (2024-04-08)
+
+
+### Features
+
+* **operator:** test ([0155d5f](https://github.com/JoaoBraveCoding/test-release/commit/0155d5f03f1e7d16098d780461ccdfcc81f4cab8))
+
 ## [0.10.7](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.10.6...operator/v0.10.7) (2024-04-08)
 
 
