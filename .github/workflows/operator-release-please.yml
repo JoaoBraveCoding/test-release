@@ -34,16 +34,6 @@ jobs:
         uses: "actions/checkout@v4"
         with:
           path: "release"
-      - name: "check if release exists"
-        env:
-          GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-        working-directory: "release"
-        id: "check_release"
-        run: |
-          echo "Release Created: " ${{ needs.releasePlease.outputs.release_created }}
-          echo "Release Name: " ${{ needs.releasePlease.outputs.release_name }}
-          echo "Releases:"
-          gh release list 
       - name: "publish release"
         env:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
