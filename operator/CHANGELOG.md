@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.9.1](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.9.0...operator/v0.9.1) (2024-04-08)
+
+
+### Features
+
+* **operator:** change name ([7fd8940](https://github.com/JoaoBraveCoding/test-release/commit/7fd89403a1d061df55934906d1b69c3f49c8dbfe))
+* **operator:** fix lint error ([4993e6b](https://github.com/JoaoBraveCoding/test-release/commit/4993e6bc56723aa0cd17f09ba37a437d2b5607ac))
+* **operator:** separate thing ([c1b10ec](https://github.com/JoaoBraveCoding/test-release/commit/c1b10ec8ddf36b44be82aca0447c1c51f721b4ea))
+* **operator:** test ([c8c363a](https://github.com/JoaoBraveCoding/test-release/commit/c8c363a8f652698329717b54827139a820299e3d))
+
 ## [0.9.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.8.0...operator/v0.9.0) (2024-04-04)
 
 
