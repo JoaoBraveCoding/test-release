@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.10.1](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.10.0...operator/v0.10.1) (2024-04-08)
+
+
+### Features
+
+* **operator:** let's get it ([ae53d06](https://github.com/JoaoBraveCoding/test-release/commit/ae53d060a53c36a44aa68650c457be5967c7f81b))
+* **operator:** new release ([908f9fd](https://github.com/JoaoBraveCoding/test-release/commit/908f9fd8536638ff10ea75233e66f708ce0bc31f))
+* **operator:** setting 10.3 ([4d1e55c](https://github.com/JoaoBraveCoding/test-release/commit/4d1e55ca9e24950a78972145ce96aff54f17fdd2))
+* **operator:** test ([5164792](https://github.com/JoaoBraveCoding/test-release/commit/5164792de10835d0b849d1327a180b2b1930f30e))
+
 ## [0.10.0](https://github.com/JoaoBraveCoding/test-release/compare/operator-v0.9.2...operator/v0.10.0) (2024-04-08)
 
 
