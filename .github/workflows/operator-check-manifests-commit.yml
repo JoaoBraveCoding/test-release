@@ -2,8 +2,10 @@ name: Check PR and Commit
 
 on:
   pull_request:
+    paths:
+      - 'operator/**'
     branches:
-      - main
+      - master
 
 jobs:
   check-pr-and-commit:
