@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.12.1](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.12.0...operator/v0.12.1) (2024-04-09)
+
+
+### Features
+
+* **operator:** commit ([4e3019b](https://github.com/JoaoBraveCoding/test-release/commit/4e3019babbe564de18d9f41aa71292ed0bdd54fd))
+* **operator:** test ([2f4dc71](https://github.com/JoaoBraveCoding/test-release/commit/2f4dc71a4c13ff4116ba343b9390e2595ff81746))
+
 ## [0.12.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.11.3...operator/v0.12.0) (2024-04-09)
 
 
