@@ -10,32 +10,34 @@ on:
 jobs:
   check-pr-and-commit:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.head.ref == 'release-please--branches--master--components--operator'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check PR title and branch
-        id: check-pr
+      - name: Extract PR Semver
+        id: pr_semver
         run: |
-          PR_TITLE=$(jq -r .pull_request.title "$GITHUB_EVENT_PATH")
-          PR_BRANCH=$(jq -r .pull_request.base.ref "$GITHUB_EVENT_PATH")
-          if [[ "$PR_TITLE" =~ ^chore\( operator\): community release [0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "::set-output name=is_valid::true"
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          SEMVER=$(echo "$PR_TITLE" | grep -oP 'chore\( operator\): community release \K\d+\.\d+\.\d+')
+          echo "::set-output name=semver::$SEMVER"
+        if: contains(github.event.pull_request.title, 'chore( operator): community release')
+
+      - name: Check Master Commits for Matching Semver
+        id: check_commit
+        run: |
+          SEMVER=${{ steps.pr_semver.outputs.semver }}
+          MATCHING_COMMIT=$(git log --oneline | grep -m 1 "chore(operator): prepare community release v$SEMVER")
+          if [ -n "$MATCHING_COMMIT" ]; then
+            echo "Matching commit found: $MATCHING_COMMIT"
+            echo "::set-output name=found::true"
           else
-            echo "::set-output name=is_valid::false"
+            echo "No matching commit found."
+            echo "::set-output name=found::false"
           fi
 
-      - name: Check for corresponding commit on master
-        if: steps.check-pr.outputs.is_valid == 'true'
-        id: check-commit
+      - name: Fail if No Matching Commit Found
+        if: steps.check_commit.outputs.found == 'false'
         run: |
-          PR_VERSION=$(echo "$PR_TITLE" | sed -n 's/^.* \([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')
-          COMMIT_TITLE="chore(operator): prepare community release v${PR_VERSION}"
-          COMMIT_FOUND=$(git log --pretty=format:%s --grep="$COMMIT_TITLE" origin/master | grep "$COMMIT_TITLE" | wc -l)
-          if [ "$COMMIT_FOUND" -gt 0 ]; then
-            echo "Prepare manifests commit found for version v${PR_VERSION}."
-          else
-            echo "Prepare manifests commit not found for version v${PR_VERSION}."
-            echo "::error::Prepare manifests commit not found for version v${PR_VERSION}."
-            exit 1
-          fi
+          echo "No matching commit found for the PR version ${{ steps.pr_semver.outputs.semver }}"
+          exit 1
