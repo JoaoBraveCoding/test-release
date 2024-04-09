@@ -21,7 +21,7 @@ jobs:
         id: pr_semver
         run: |
           PR_TITLE="${{ github.event.pull_request.title }}"
-          SEMVER=$(echo "$PR_TITLE" | grep -oP 'chore\( operator\): community release \K\d+\.\d+\.\d+')
+          SEMVER=$(echo "$PR_TITLE" | sed -n 's/^chore( operator): community release \([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')
           echo "::set-output name=semver::$SEMVER"
 
       - name: Check Master Commits for Matching Semver
