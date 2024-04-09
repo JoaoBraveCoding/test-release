@@ -33,7 +33,8 @@ jobs:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
         working-directory: "release"
         run: |
-          if gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"; then
+          COMMIT=$(gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}")
+          if [ -n "$COMMIT" ]; then
             echo "Matching commit found."
             echo "found=true" >> $GITHUB_OUTPUT 
           else
