@@ -28,14 +28,13 @@ jobs:
           echo "::set-output name=semver::$SEMVER"
 
       - name: Check Master Commits for Matching Semver
+        env:
+          GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
         id: check_commit
         working-directory: "release"
         run: |
-          set +e
-          MATCHING_COMMIT=$(git log --oneline | grep -m 1 "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}")
-          set -e
-          git log --oneline
-          if [ -n "$MATCHING_COMMIT" ]; then
+          gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"
+          if gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"; then
             echo "Matching commit found: $MATCHING_COMMIT"
             echo "::set-output name=found::true"
           else
