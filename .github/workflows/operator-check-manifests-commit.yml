@@ -8,42 +8,41 @@ on:
       - master
 
 jobs:
-  check-pr-and-commit:
+  check-prepare-release-commit:
     runs-on: ubuntu-latest
     if: |
       github.event.pull_request.head.ref == 'release-please--branches--master--components--operator' && 
       contains(github.event.pull_request.title, 'chore( operator): community release')
     steps:
+      - name: Extract release version
+        id: pr_semver
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          SEMVER=$(echo "$PR_TITLE" | sed -n 's/^chore( operator): community release \([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')
+          echo "semver=$SEMVER" >> $GITHUB_OUTPUT
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           ref: master
           path: "release"
 
-      - name: Extract PR Semver
-        id: pr_semver
-        run: |
-          PR_TITLE="${{ github.event.pull_request.title }}"
-          SEMVER=$(echo "$PR_TITLE" | sed -n 's/^chore( operator): community release \([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')
-          echo "::set-output name=semver::$SEMVER"
-
-      - name: Check Master Commits for Matching Semver
+      - name: Check main commits for prepare release commit
+        id: check_commit
         env:
           GH_TOKEN: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-        id: check_commit
         working-directory: "release"
         run: |
-          gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"
           if gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"; then
-            echo "Matching commit found: $MATCHING_COMMIT"
-            echo "::set-output name=found::true"
+            echo "Matching commit found.
+            echo "found=true" >> $GITHUB_OUTPUT 
           else
             echo "No matching commit found."
-            echo "::set-output name=found::false"
+            echo "found=false" >> $GITHUB_OUTPUT 
           fi
 
-      - name: Fail if No Matching Commit Found
+      - name: Fail if no prepare release commit
         if: steps.check_commit.outputs.found == 'false'
         run: |
-          echo "No matching commit found for the PR version ${{ steps.pr_semver.outputs.semver }}"
+          echo "No prepare release commit found for the release version ${{ steps.pr_semver.outputs.semver }}"
           exit 1
