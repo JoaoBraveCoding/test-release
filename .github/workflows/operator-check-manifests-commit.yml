@@ -27,8 +27,7 @@ jobs:
       - name: Check Master Commits for Matching Semver
         id: check_commit
         run: |
-          MATCHING_COMMIT=$(git log --oneline | grep -m 1 "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}")
-          if [ -n "$MATCHING_COMMIT" ]; then
+          if git log --oneline | grep -m 1 "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"; then
             echo "Matching commit found: $MATCHING_COMMIT"
             echo "::set-output name=found::true"
           else
