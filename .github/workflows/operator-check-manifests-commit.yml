@@ -1,0 +1,39 @@
+name: Check PR and Commit
+
+on:
+  pull_request:
+    branches:
+      - release-please--branches--master--components--operator
+
+jobs:
+  check-pr-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check PR title and branch
+        id: check-pr
+        run: |
+          PR_TITLE=$(jq -r .pull_request.title "$GITHUB_EVENT_PATH")
+          PR_BRANCH=$(jq -r .pull_request.base.ref "$GITHUB_EVENT_PATH")
+          if [[ "$PR_TITLE" =~ ^chore\( operator\): community release [0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::set-output name=is_valid::true"
+          else
+            echo "::set-output name=is_valid::false"
+          fi
+
+      - name: Check for corresponding commit on master
+        if: steps.check-pr.outputs.is_valid == 'true'
+        id: check-commit
+        run: |
+          PR_VERSION=$(echo "$PR_TITLE" | sed -n 's/^.* \([0-9]\+\.[0-9]\+\.[0-9]\+\)$/\1/p')
+          COMMIT_TITLE="chore(operator): prepare community release v${PR_VERSION}"
+          COMMIT_FOUND=$(git log --pretty=format:%s --grep="$COMMIT_TITLE" origin/master | grep "$COMMIT_TITLE" | wc -l)
+          if [ "$COMMIT_FOUND" -gt 0 ]; then
+            echo "Prepare manifests commit found for version v${PR_VERSION}."
+          else
+            echo "Prepare manifests commit not found for version v${PR_VERSION}."
+            echo "::error::Prepare manifests commit not found for version v${PR_VERSION}."
+            exit 1
+          fi
