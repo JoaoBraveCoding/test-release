@@ -34,7 +34,7 @@ jobs:
         working-directory: "release"
         run: |
           if gh search commits "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}"; then
-            echo "Matching commit found.
+            echo "Matching commit found."
             echo "found=true" >> $GITHUB_OUTPUT 
           else
             echo "No matching commit found."
