@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.12.0](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.11.3...operator/v0.12.0) (2024-04-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **operator:** lets do 0.12.0
+
+### Features
+
+* **operator:** lets do 0.12.0 ([d6921de](https://github.com/JoaoBraveCoding/test-release/commit/d6921def14088830e2f81d4647d6b9b520380477))
+
 ## [0.11.3](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.11.2...operator/v0.11.3) (2024-04-09)
 
 
