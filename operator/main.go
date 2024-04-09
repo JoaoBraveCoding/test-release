@@ -60,5 +60,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error generating UUID")
 	}
-	fmt.Println("This is not really the Loki Operator, just meant to look like it. Here's a UUID: ", uid)
+	fmt.Println("This is not really the Loki Operator, just meant to look like it. Her's a UUID: ", uid)
 }
