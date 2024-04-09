@@ -10,7 +10,7 @@ on:
 jobs:
   check-pr-and-commit:
     runs-on: ubuntu-latest
-    if: =
+    if: |
       github.event.pull_request.head.ref == 'release-please--branches--master--components--operator' && 
       contains(github.event.pull_request.title, 'chore\\( operator\\): community release')
     steps:
