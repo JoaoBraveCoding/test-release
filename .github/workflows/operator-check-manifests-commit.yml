@@ -10,7 +10,9 @@ on:
 jobs:
   check-pr-and-commit:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.ref == 'release-please--branches--master--components--operator'
+    if: =
+      github.event.pull_request.head.ref == 'release-please--branches--master--components--operator' && 
+      contains(github.event.pull_request.title, 'chore\\( operator\\): community release')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -21,7 +23,6 @@ jobs:
           PR_TITLE="${{ github.event.pull_request.title }}"
           SEMVER=$(echo "$PR_TITLE" | grep -oP 'chore\( operator\): community release \K\d+\.\d+\.\d+')
           echo "::set-output name=semver::$SEMVER"
-        if: contains(github.event.pull_request.title, 'chore( operator): community release')
 
       - name: Check Master Commits for Matching Semver
         id: check_commit
