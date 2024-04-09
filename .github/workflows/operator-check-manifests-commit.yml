@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     if: |
       github.event.pull_request.head.ref == 'release-please--branches--master--components--operator' && 
-      contains(github.event.pull_request.title, 'chore\\( operator\\): community release')
+      contains(github.event.pull_request.title, 'chore( operator): community release')
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
