@@ -28,7 +28,7 @@ jobs:
         id: check_commit
         run: |
           set +e
-          MATCHING_COMMIT=$(git log --oneline | grep -m 1 "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}")
+          MATCHING_COMMIT=$(git log --oneline origin/master | grep -m 1 "chore(operator): prepare community release v${{ steps.pr_semver.outputs.semver }}")
           set -e
           if [ -n "$MATCHING_COMMIT" ]; then
             echo "Matching commit found: $MATCHING_COMMIT"
