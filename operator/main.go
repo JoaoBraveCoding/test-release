@@ -55,6 +55,7 @@ func main() {
 	fmt.Println("New feature for 0.11.12")
 	fmt.Println("New feature for 0.11.13")
 	fmt.Println("New feature for 0.11.14")
+	fmt.Println("New feature for 0.11.15")
 
 	
 	uid, err := uuid.GenerateUUID()
