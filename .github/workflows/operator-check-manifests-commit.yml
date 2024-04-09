@@ -3,7 +3,7 @@ name: Check PR and Commit
 on:
   pull_request:
     branches:
-      - release-please--branches--master--components--operator
+      - main
 
 jobs:
   check-pr-and-commit:
