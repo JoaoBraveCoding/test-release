@@ -1,5 +1,33 @@
 # Changelog
 
+## [0.11.3](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.11.2...operator/v0.11.3) (2024-04-09)
+
+
+### Features
+
+* **opeator:** simple commit ([49367e1](https://github.com/JoaoBraveCoding/test-release/commit/49367e1bbf1057d710fe7517b5cbab8453db0601))
+* **operator:** bump ([5cfa6da](https://github.com/JoaoBraveCoding/test-release/commit/5cfa6da9a65d4031f3cb149029328fac4a40dcc9))
+* **operator:** escaping : ([bb6df64](https://github.com/JoaoBraveCoding/test-release/commit/bb6df64b5ed086432db17e8fc1d275fbc7b872ea))
+* **operator:** fix escaping ([366934a](https://github.com/JoaoBraveCoding/test-release/commit/366934a12d02a96ec96ce632956d6ebe7af9947e))
+* **operator:** fix revision ([2e3ddb7](https://github.com/JoaoBraveCoding/test-release/commit/2e3ddb7add7840e600fa3ad070475b855234eb98))
+* **operator:** fixed quote ([5bb0d8c](https://github.com/JoaoBraveCoding/test-release/commit/5bb0d8cc39ebdfa20d35352be054b6bd3690608b))
+* **operator:** look in master ([096e63d](https://github.com/JoaoBraveCoding/test-release/commit/096e63d0ac5cf44c2291502f627b3795d5bec3d4))
+* **operator:** new check ([ffe0067](https://github.com/JoaoBraveCoding/test-release/commit/ffe0067ac3a7e485d5ec4b3dafb53ede07a7f6ed))
+* **operator:** PRs that target main ([faf1a4b](https://github.com/JoaoBraveCoding/test-release/commit/faf1a4bb7c8c8f0040527140fa1a40a02a5068c5))
+* **operator:** test ([ef8136b](https://github.com/JoaoBraveCoding/test-release/commit/ef8136b54650d2efe2c767d6352fb58bf95c16e8))
+* **operator:** test ([9ad11d5](https://github.com/JoaoBraveCoding/test-release/commit/9ad11d5c0940a1ec3a05e94f5d09b03a853c7776))
+* **operator:** test ([90e559b](https://github.com/JoaoBraveCoding/test-release/commit/90e559be744a999fe9de4033cb013c6370373285))
+* **operator:** test ([4d182a6](https://github.com/JoaoBraveCoding/test-release/commit/4d182a62c3c9bf99f22b9e743da681104dae33a6))
+* **operator:** test ([d25080a](https://github.com/JoaoBraveCoding/test-release/commit/d25080ace2ee5058ef5dc0a7f9e7fde5f1fbd4b9))
+* **operator:** test ([91ea805](https://github.com/JoaoBraveCoding/test-release/commit/91ea805b088077bc2457ab9d04b981e030d52b58))
+* **operator:** test ([ce73a13](https://github.com/JoaoBraveCoding/test-release/commit/ce73a132ff9135412fea2753acc683da21ba1104))
+* **operator:** test ([16f5be1](https://github.com/JoaoBraveCoding/test-release/commit/16f5be18e027de5cf35951fce03624aed80c5ad3))
+* **operator:** test ([3454066](https://github.com/JoaoBraveCoding/test-release/commit/3454066933458df602bbf7486d52e10cad07d224))
+* **operator:** using sed ([7a79da0](https://github.com/JoaoBraveCoding/test-release/commit/7a79da0b2209c6991e6e76e920e7aa7e58e13118))
+* **operator:** with gh ([a4aed3e](https://github.com/JoaoBraveCoding/test-release/commit/a4aed3e8a3f13bf8b00bd5c4670ffa6dcc8e2bd6))
+* **operator:** with ref ([7039e7f](https://github.com/JoaoBraveCoding/test-release/commit/7039e7f634e8a078c196787fc77a45660f3eb29c))
+* **operator:** without setoutput ([7b4d184](https://github.com/JoaoBraveCoding/test-release/commit/7b4d184cc297cdd1b1d6b5d4c1da563956d37a87))
+
 ## [0.11.2](https://github.com/JoaoBraveCoding/test-release/compare/operator/v0.11.1...operator/v0.11.2) (2024-04-08)
 
 
