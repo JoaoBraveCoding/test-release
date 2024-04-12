@@ -4,6 +4,7 @@
     "include-component-in-tag": true,
     "draft": true,
     "tag-separator": "/",
+    "last-release-sha": "c53812e0b455ef982b5024f1fcdfb3372d23f8ca",
     "packages": {
         "operator": {
             "component": "operator",
