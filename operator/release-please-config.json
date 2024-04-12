@@ -6,6 +6,7 @@
     "tag-separator": "/",
     "packages": {
         "operator": {
+            "release-as": "0.13.0",
             "component": "operator",
             "release-type": "go",
             "pull-request-title-pattern": "chore(${component}): community release ${version}",

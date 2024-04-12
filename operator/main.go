@@ -77,7 +77,8 @@ func main() {
 	fmt.Println("New feature for 0.12.3")
 	fmt.Println("manifests")	
 	fmt.Println("New feature for 0.12.3")	
-	
+	fmt.Println("New feature for 0.13.0")	
+
 	uid, err := uuid.GenerateUUID()
 	if err != nil {
 		fmt.Println("Error generating UUID")
