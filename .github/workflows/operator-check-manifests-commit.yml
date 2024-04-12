@@ -1,4 +1,4 @@
-name: Check PR and Commit
+name: Check for prepare release commit
 
 on:
   pull_request:
